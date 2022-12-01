@@ -1,3 +1,4 @@
+import React from "react";
 import UserTile from "./UserTile";
 import FollowTile from "./FollowTile";
 import UserFavoriteTile from "./UserFavoriteTile";
@@ -5,7 +6,7 @@ import { Button, Form } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import { Divider } from "semantic-ui-react";
 
-export default function Home({ user, addFollowed, removeFollowed }) {
+export default function Home({ user, addFollowed, removeFollowed, logout }) {
 	const [formVisible, setFormVisible] = useState(false);
 	const [activeFavorites, setActiveFavorites] = useState([]);
 	const [username, setUsername] = useState(user.username);
@@ -34,19 +35,20 @@ export default function Home({ user, addFollowed, removeFollowed }) {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				username: username,
+				username: username.toLowerCase(),
 				avatar: avatar,
 				password: password,
 				password_confirmation: passwordConfirmation,
 			}),
 		}).then((r) => {
 			if (r.ok) {
-				r.json().then((data) => console.log(data));
+				r.json();
 			} else {
 				r.json().then((r) => setErrors(r.errors));
 			}
 		});
 		setFormVisible(false);
+		logout();
 	}
 
 	users.forEach((u) => {
@@ -114,6 +116,17 @@ export default function Home({ user, addFollowed, removeFollowed }) {
 				</Button>
 				{formVisible ? (
 					<div id="edit-form">
+						<ul>
+							<li>
+								<h4>
+									You must enter or change your password to edit these fields.
+								</h4>
+							</li>
+							<li>
+								<h4>You will also be logged out.</h4>
+							</li>
+						</ul>
+
 						<Form onSubmit={updateUser}>
 							<Form.Field>
 								<input

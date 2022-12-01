@@ -1,3 +1,4 @@
+import React from "react";
 import { Divider } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
 

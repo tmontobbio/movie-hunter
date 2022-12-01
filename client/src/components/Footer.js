@@ -1,3 +1,4 @@
+import React from "react";
 import git from "./img/gitlogo.png";
 import dev from "./img/devto.png";
 
@@ -8,7 +9,7 @@ export default function Footer() {
 				<a
 					href="https://github.com/tmontobbio"
 					target="_blank"
-					rel="noreferrer"
+					rel="noopener noreferrer"
 				>
 					<img src={git} alt="git" />
 				</a>
@@ -23,7 +24,7 @@ export default function Footer() {
 				<a
 					href="https://github.com/tmontobbio/movie-hoarder"
 					target="_blank"
-					rel="noreferrer"
+					rel="noopener noreferrer"
 				>
 					<img src={dev} alt="dev-io" />
 				</a>

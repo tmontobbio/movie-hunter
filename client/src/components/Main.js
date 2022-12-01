@@ -1,3 +1,4 @@
+import React from "react";
 import Nav from "./Nav";
 import Search from "./Search";
 import Home from "./Home";
@@ -7,15 +8,24 @@ import Footer from "./Footer";
 import { Route, Routes } from "react-router-dom";
 
 export default function Main({ setUser, user, addFollowed, removeFollowed }) {
+	function logout() {
+		fetch("/api/logout", { method: "DELETE" }).then((r) => {
+			if (r.ok) {
+				setUser(null);
+			}
+		});
+	}
+
 	return (
 		<>
-			<Nav setUser={setUser} user={user} />
+			<Nav setUser={setUser} user={user} logout={logout} />
 			<div id="content-container">
 				<Routes>
 					<Route
 						path="/"
 						element={
 							<Home
+								logout={logout}
 								user={user}
 								addFollowed={addFollowed}
 								removeFollowed={removeFollowed}

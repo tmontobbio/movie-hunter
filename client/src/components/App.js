@@ -1,5 +1,5 @@
+import React from "react";
 import { useState, useEffect } from "react";
-
 import Splash from "./Splash";
 import Main from "./Main";
 import "./App.css";

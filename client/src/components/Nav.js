@@ -1,16 +1,9 @@
+import React from "react";
 import logo from "./img/deer-logo.png";
 import { Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-export default function Nav({ user, setUser }) {
-	function logout() {
-		fetch("/api/logout", { method: "DELETE" }).then((r) => {
-			if (r.ok) {
-				setUser(null);
-			}
-		});
-	}
-
+export default function Nav({ user, logout }) {
 	return (
 		<div id="nav-bar">
 			<div id="nav-left">

@@ -1,3 +1,4 @@
+import React from "react";
 import FavoriteTile from "./FavoriteTile";
 import uhoh from "./img/uh-oh.png";
 import { useState, useEffect } from "react";

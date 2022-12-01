@@ -1,3 +1,4 @@
+import React from "react";
 import SearchTile from "./SearchTile";
 import { useState, useEffect } from "react";
 import { Input, Button, Divider } from "semantic-ui-react";
