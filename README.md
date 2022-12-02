@@ -14,6 +14,7 @@ Features:
 -See other user's favorites
 -Follow other users
 -Add/Delete favorites
+-Delete your account
 
 This project was built on:
 

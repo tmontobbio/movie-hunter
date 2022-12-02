@@ -6,7 +6,14 @@ import { Button, Form } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import { Divider } from "semantic-ui-react";
 
-export default function Home({ user, addFollowed, removeFollowed, logout }) {
+export default function Home({
+	user,
+	setUser,
+	addFollowed,
+	removeFollowed,
+	logout,
+}) {
+	const [deleteConfirmation, deleteConfirmationVisible] = useState(false);
 	const [formVisible, setFormVisible] = useState(false);
 	const [activeFavorites, setActiveFavorites] = useState([]);
 	const [username, setUsername] = useState(user.username);
@@ -26,6 +33,17 @@ export default function Home({ user, addFollowed, removeFollowed, logout }) {
 			setActiveFavorites([]);
 		});
 	}, []);
+
+	function showDeleteConfirm() {
+		deleteConfirmationVisible(true);
+	}
+
+	function deleteAccount() {
+		fetch("/api/users/delete", {
+			method: "DELETE",
+		});
+		setUser(null);
+	}
 
 	function updateUser(e) {
 		e.preventDefault();
@@ -162,6 +180,22 @@ export default function Home({ user, addFollowed, removeFollowed, logout }) {
 								Submit
 							</Button>
 						</Form>
+						{deleteConfirmation ? (
+							<div className="delete-account-options">
+								<h5>
+									This cannot be un-done, all of your data will be destroyed!
+								</h5>
+								<Button onClick={deleteAccount} negative>
+									CONFIRM
+								</Button>
+							</div>
+						) : (
+							<div className="delete-account-options">
+								<Button onClick={showDeleteConfirm} negative>
+									Deactivate Account
+								</Button>
+							</div>
+						)}
 					</div>
 				) : null}
 				<h4>Click a user's avatar to see their favorite movies!</h4>

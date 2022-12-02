@@ -32,6 +32,12 @@ class UsersController < ApplicationController
     render json: movies, status: :ok
   end
 
+  def destroy
+    user = User.find_by(id: session[:user_id])
+    user.destroy
+    head :no_content, status: :accepted
+  end
+
   private
 
   def invalid_record(e)

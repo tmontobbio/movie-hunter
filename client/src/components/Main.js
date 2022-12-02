@@ -27,6 +27,7 @@ export default function Main({ setUser, user, addFollowed, removeFollowed }) {
 							<Home
 								logout={logout}
 								user={user}
+								setUser={setUser}
 								addFollowed={addFollowed}
 								removeFollowed={removeFollowed}
 							/>

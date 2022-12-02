@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "/api/users", to: "users#index"
   get "/api/users/:id", to: "users#details"
   patch "/api/users/:id", to: "users#update"
+  delete "/api/users/delete", to: "users#destroy"
 
   get "/api/me", to: "users#show"
   post "/api/signup", to: "users#create"
