@@ -1,6 +1,6 @@
 import React from "react";
 import git from "./img/gitlogo.png";
-import dev from "./img/devto.png";
+import linkedin from "./img/linkedin.png";
 
 export default function Footer() {
 	return (
@@ -22,11 +22,11 @@ export default function Footer() {
 			</div>
 			<div className="logos">
 				<a
-					href="https://github.com/tmontobbio/movie-hoarder"
+					href="www.linkedin.com/in/tmontobbio"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<img src={dev} alt="dev-io" />
+					<img src={linkedin} alt="linkedin" />
 				</a>
 			</div>
 		</div>
