@@ -22,7 +22,7 @@ export default function Footer() {
 			</div>
 			<div className="logos">
 				<a
-					href="www.linkedin.com/in/tmontobbio"
+					href="https://linkedin.com/in/tmontobbio"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
