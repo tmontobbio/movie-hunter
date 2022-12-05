@@ -7,7 +7,7 @@ export default function Footer() {
 		<div id="footer">
 			<div className="logos">
 				<a
-					href="https://github.com/tmontobbio"
+					href="https://github.com/tmontobbio/movie-hunter"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
