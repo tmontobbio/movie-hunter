@@ -12,6 +12,7 @@ export default function Details({ user }) {
 	const [comments, setComments] = useState([]);
 	const [visible, setVisible] = useState(false);
 	const navigate = useNavigate();
+	const { imdb } = useParams();
 	let movieComments = [];
 	const {
 		title,
@@ -32,7 +33,6 @@ export default function Details({ user }) {
 		imdb_rating,
 		imdb_votes,
 	} = movieDetails;
-	const { imdb } = useParams();
 
 	useEffect(() => {
 		if (imdb) {
@@ -84,7 +84,6 @@ export default function Details({ user }) {
 			<div id="detail-right-container">
 				<h1>{title}</h1>
 				<h2>{year}</h2>
-
 				<h3>
 					IMDB Rating&nbsp;{imdb_rating} | Votes&nbsp;{imdb_votes}
 				</h3>

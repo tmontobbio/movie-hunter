@@ -7,6 +7,14 @@ import "./App.css";
 function App() {
 	const [user, setUser] = useState(null);
 
+	useEffect(() => {
+		fetch("/api/me").then((r) => {
+			if (r.ok) {
+				r.json().then((user) => setUser(user));
+			}
+		});
+	}, []);
+
 	const addFollowed = (followed) =>
 		setUser((user) => ({
 			...user,
@@ -18,14 +26,6 @@ function App() {
 			...user,
 			users_followed: user.users_followed.filter((f) => f.id !== id),
 		}));
-
-	useEffect(() => {
-		fetch("/api/me").then((r) => {
-			if (r.ok) {
-				r.json().then((user) => setUser(user));
-			}
-		});
-	}, []);
 
 	return (
 		<div id="app">
