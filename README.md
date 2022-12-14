@@ -1,20 +1,10 @@
 # README
 
-## Movie Hoarder
+# Movie Hunter
 
-Welcome to my project! This site will serve as a platform that allows users to browse movies and their related data. Users will be allowed to save movies to their own playlist, and make personal notes about those movies. Users will also be able to join discussions related to movies with other users. Users will be able to view and share their list with other users.
+I am a obsessor of film, I watch hundreds of movies a year, I designed this app to keep track of my favorites, and also share those favorites with others. Users can sign up for an account and create their own list, you can click on users in the user-list and follow them to remember their favorites too! Go sign up and have fun!
 
-Features:
-
--Login/Auth
--Serilized relationships
--Tokens/Cookies
--Custom routing
--Update user settings
--See other user's favorites
--Follow other users
--Add/Delete favorites
--Delete your account
+---
 
 This project was built on:
 
