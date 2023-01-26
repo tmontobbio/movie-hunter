@@ -41,6 +41,7 @@ export default function Signup({ setUser, setErrors, hideErrors }) {
 			<Form onSubmit={handleSubmit}>
 				<Form.Field>
 					<input
+						className="form-field"
 						placeholder="Username"
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
@@ -48,6 +49,7 @@ export default function Signup({ setUser, setErrors, hideErrors }) {
 				</Form.Field>
 				<Form.Field>
 					<input
+						className="form-field"
 						placeholder="Avatar Image URL"
 						value={avatar}
 						onChange={(e) => setAvatar(e.target.value)}
@@ -55,6 +57,7 @@ export default function Signup({ setUser, setErrors, hideErrors }) {
 				</Form.Field>
 				<Form.Field>
 					<input
+						className="form-field"
 						placeholder="Password - 6-20 Characters"
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
@@ -63,6 +66,7 @@ export default function Signup({ setUser, setErrors, hideErrors }) {
 				</Form.Field>
 				<Form.Field>
 					<input
+						className="form-field"
 						placeholder="Confirm Password"
 						value={passwordConfirmation}
 						onChange={(e) => setPasswordConfirmation(e.target.value)}

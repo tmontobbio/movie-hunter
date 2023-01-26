@@ -32,12 +32,14 @@ export default function Login({ setUser, setLoginError, hideErrors }) {
 			<Form onSubmit={handleSubmit}>
 				<Form.Field>
 					<input
+						className="form-field"
 						placeholder="Username"
 						onChange={(e) => setUsername(e.target.value)}
 					/>
 				</Form.Field>
 				<Form.Field>
 					<input
+						className="form-field"
 						placeholder="Password"
 						onChange={(e) => setPassword(e.target.value)}
 						type="password"

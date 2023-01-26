@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   post "/api/follows", to: "follows#create"
   delete "/api/follows/:id", to: "follows#destroy"
 
-  resources :favorites, only: [:index, :show]
+  #resources :favorites, only: [:index, :show, :destroy]
   get "/api/favorites", to: "favorites#index"
   post "/api/favorites", to: "favorites#create"
   delete "/api/favorites/:id", to: "favorites#destroy"
 
-  # resources :comments
+  #resources :comments [:index, :create]
   get "/api/comments", to: "comments#index"
   post "/api/comments", to: "comments#create"
 

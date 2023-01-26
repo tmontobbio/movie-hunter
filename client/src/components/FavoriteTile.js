@@ -1,4 +1,5 @@
 import React from "react";
+import x_img from "../components/img/x.png"
 import { useNavigate } from "react-router-dom";
 import { Button, Divider } from "semantic-ui-react";
 
@@ -25,16 +26,14 @@ export default function FavoriteTile({
 
 	return (
 		<div className="movie-card">
-			<div className="tile-title-container">
-				<h3>
-					{title} - {year}
-				</h3>
-			</div>
+			<h3>
+				{title} - {year}
+			</h3>
 			<Divider />
-			<img src={image} alt="card-tile" onClick={queryDetails} />
-			<Button inverted color="red" onClick={deleteFavorite}>
-				X
-			</Button>
+			<img src={image} alt="card-tile" className="movie-poster" onClick={queryDetails} />
+			<div className="card-btn-holder">
+				<Button inverted color="red" onClick={deleteFavorite} ><img className="icon-small" src={x_img} /></Button>
+			</div>
 		</div>
 	);
 }

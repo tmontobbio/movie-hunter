@@ -1,8 +1,8 @@
 import React from "react";
-import { Divider } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
+import { Button, Divider } from "semantic-ui-react";
 
-export default function UserFavoriteTile({ title, year, image, imdb }) {
+export default function MovieTile({ imdb, title, year, image }) {
 	const navigate = useNavigate();
 
 	function queryDetails() {
@@ -15,7 +15,7 @@ export default function UserFavoriteTile({ title, year, image, imdb }) {
 				{title} - {year}
 			</h3>
 			<Divider />
-			<img src={image} alt="user-follow-img" onClick={queryDetails} />
-		</div>
+			<img src={image} alt="movie-card" className="movie-poster" onClick={queryDetails} />
+		</div >
 	);
 }

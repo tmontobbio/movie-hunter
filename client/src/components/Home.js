@@ -205,15 +205,15 @@ export default function Home({
 				<div id="home-left">
 					<b>Users</b>
 					<Divider />
-					<div className="user-list">
-						<h3>{userList}</h3>
+					<div className="user-container">
+						{userList}
 					</div>
 				</div>
 				<div id="home-right">
 					<b>Following</b>
 					<Divider />
-					<div className="user-list">
-						<h3>{followList}</h3>
+					<div className="user-container">
+						{followList}
 					</div>
 				</div>
 			</div>

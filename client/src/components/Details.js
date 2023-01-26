@@ -45,7 +45,7 @@ export default function Details({ user }) {
 		}
 	}, [imdb]);
 
-	function handleSubmit() {
+	function handleLike() {
 		fetch("/api/favorites", {
 			method: "POST",
 			headers: {
@@ -91,13 +91,13 @@ export default function Details({ user }) {
 				<br />
 				<div id="detail-buttons">
 					<a href={"https://www.imdb.com/title/" + imdb}>
-						<img src={imdbLogo} alt="imdb-logo" id="imdb-logo" />
+						<img src={imdbLogo} alt="imdb-logo" className="icon" />
 					</a>
 					<img
 						src={favorite}
 						alt="favorite-btn"
-						id="favorite"
-						onClick={(e) => handleSubmit()}
+						className="icon"
+						onClick={() => handleLike()}
 					/>
 				</div>
 				<ul>

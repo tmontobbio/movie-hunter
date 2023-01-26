@@ -1,5 +1,5 @@
 import React from "react";
-import SearchTile from "./SearchTile";
+import MovieTile from "./MovieTile";
 import { useState, useEffect } from "react";
 import { Input, Button, Divider } from "semantic-ui-react";
 
@@ -39,9 +39,9 @@ export default function Search() {
 			});
 	};
 
-	const searchTiles = movies.map((m) => {
+	const movieTiles = movies.map((m) => {
 		return (
-			<SearchTile
+			<MovieTile
 				title={m.title}
 				year={m.year}
 				image={m.poster}
@@ -56,24 +56,27 @@ export default function Search() {
 			<div>
 				<form onSubmit={handleSubmit}>
 					<h1>Search Movies</h1>
+					<Divider className="divider" />
 					<br />
 					<div className="error-div">{error ? error : null}</div>
 					<Input
 						fluid
-						icon="search"
+						className="form-field"
 						placeholder="Search..."
 						onChange={(e) => setInput(e.target.value)}
 						value={input}
 					/>
-					<Button type="submit" value="search">
+					<div className="spacer"></div>
+					<Button className="button" type="submit" value="search">
 						Search
 					</Button>
-					<Divider />
+					<div className="spacer"></div>
 					<h2>Users liked...</h2>
+					<Divider className="divider" />
 				</form>
 			</div>
 			<div id="search-results-container" className="grid-container">
-				{searchTiles}
+				{movieTiles}
 			</div>
 		</div>
 	);

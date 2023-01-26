@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./img/deer-logo.png";
-import { Button } from "semantic-ui-react";
+import { Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 export default function Nav({ user, logout }) {
@@ -14,22 +14,34 @@ export default function Nav({ user, logout }) {
 
 			<div id="nav-middle">
 				<Link to="/">
-					<Button basic inverted color="pink">
-						Home
+					<Button animated >
+						<Button.Content visible>Home</Button.Content>
+						<Button.Content hidden>
+							<Icon name='home' />
+						</Button.Content>
 					</Button>
 				</Link>
 				<Link to="/search">
-					<Button basic inverted color="pink">
-						Search
+					<Button animated>
+						<Button.Content visible>Search</Button.Content>
+						<Button.Content hidden>
+							<Icon name='video camera' />
+						</Button.Content>
 					</Button>
 				</Link>
 				<Link to="/favorites">
-					<Button basic inverted color="pink">
-						Favorites
+					<Button animated>
+						<Button.Content visible>Favorites</Button.Content>
+						<Button.Content hidden>
+							<Icon name='heart' />
+						</Button.Content>
 					</Button>
 				</Link>
-				<Button basic inverted color="red" onClick={logout}>
-					Log-out
+				<Button animated onClick={logout}>
+					<Button.Content visible>Log-out</Button.Content>
+					<Button.Content hidden>
+						<Icon name='log out' />
+					</Button.Content>
 				</Button>
 			</div>
 			<div id="nav-right">

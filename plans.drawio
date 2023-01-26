@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="gm06rgL7OHGMaCAxDYFr" name="Page-1">
-        <mxGraphModel dx="2193" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1729" dy="422" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -115,7 +115,7 @@
                         <mxPoint x="-399" y="757.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="80" value="SearchTile" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="80" value="MovieTile" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="-577" y="675" width="80" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="91" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="80" target="90" edge="1">
@@ -209,7 +209,7 @@
                 <mxCell id="125" value="FollowTile" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="-668.43" y="675" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="130" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="127" target="90">
+                <mxCell id="130" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="127" target="90" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-580" y="750" as="targetPoint"/>
                     </mxGeometry>

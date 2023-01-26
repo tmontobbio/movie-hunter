@@ -14,12 +14,12 @@ export default function Footer() {
 					<img src={git} alt="git" />
 				</a>
 			</div>
-			<div id="footer-text">
+			<span id="footer-text">
 				<ul>
 					<li>Website design by Tyler Montobbio</li>
 					<li>Data courtesy of OMDB API & IMDB.</li>
 				</ul>
-			</div>
+			</span>
 			<div className="logos">
 				<a
 					href="https://linkedin.com/in/tmontobbio"
